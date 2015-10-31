@@ -53,6 +53,8 @@ alias oo="open ."
 alias g="git"
 # Git add and commit in one
 alias gac="git add .; git commit"
+alias pull='git pull origin master'
+alias push='git push origin master'
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
