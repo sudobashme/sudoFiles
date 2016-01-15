@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - - 
+#
+# - - - - - - - - - - - - - - [ .exports ] - - - - - - - - - - - - - - - - - - 
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+export EDITOR=$(which vim)
+export NOTESDIR="/Users/slime/Dropbox/Notes";
+export GITDIR="/Users/slime/workspace/github";
+export TODO="/Users/slime/Dropbox/Notes/TODO";
+export HISTFILESIZE="32768";
+export HISTCONTROL="ignoreboth";
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";

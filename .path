@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-#                         --[ sudofile project ]--
-#                              --[ .path ]--
+# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - - 
+#
+# - - - - - - - - - - - - - - - [ .path ] - - - - - - - - - - - - - - - - - - 
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Added for homebrew
@@ -12,14 +13,6 @@ fi
 # Added for homebrew bash
 if [[ "$PATH" != *":/usr/local/bin:"* ]]; then
     PATH=/usr/local/sbin:$PATH
-fi
-# Added for node package manager
-if [[ "$PATH" != *":/usr/local/share/npm/bin:"* ]]; then
-    PATH=/usr/local/share/npm/bin:$PATH
-fi
-# Added for ruby version manager
-if [[ "$PATH" != *":$HOME/.rvm/bin:"* ]]; then
-    PATH=$HOME/.rvm/bin:$PATH
 fi
 # and export it
 export PATH
