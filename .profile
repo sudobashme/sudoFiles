@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - -
 #
-# - - - - - - - - - - - - - - [ .profile ] - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - [ .profile ] - - - - - - - - - - - - - - - - - -
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 if [ -f "$HOME/.prompt" ]; then
     source "$HOME/.prompt"
-fi 
+fi
 if [ -f "$HOME/.aliases" ]; then
     source "$HOME/.aliases"
 fi
@@ -25,6 +25,6 @@ fi
 if [ -f "$HOME/.functions" ]; then
     source "$HOME/.functions"
 fi
-if [ -f "$HOME/pythondev/bin/activate" ]; then
-    source "$HOME/pythondev/bin/activate"
-fi
+#if which pyenv > /dev/null; then
+#    eval "$(pyenv init -)"
+#fi
