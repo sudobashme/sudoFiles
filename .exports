@@ -8,14 +8,16 @@
 
 export EDITOR=$(which vim)
 export GITDIR="/Users/slime/GitHub";
+export WORKSPACE="/Users/slime/WorkSpace";
 export HISTFILESIZE="32768";
 export HISTCONTROL="ignoreboth";
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
 export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3";
 export PYENV_ROOT="/usr/local/var/pyenv";
-
-export NVM_DIR="/Users/slime/.nvm"
+export GOPATH="/Users/slime/WorkSpace/go";
+export PYPATH="/Users/slime/WorkSpace/py";
+export NVM_DIR="/Users/slime/.nvm";
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export WORKON_HOME="~/.virtualenvs" && source /usr/local/bin/virtualenvwrapper.sh
