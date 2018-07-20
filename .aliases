@@ -1,26 +1,17 @@
 #!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - - 
+# - - ] sudoFiles/.aliases
+# - - ] updated: 2018.07.20
 #
-# - - - - - - - - - - - - - - [ .aliases ] - - - - - - - - - - - - - - - - - - 
-#
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-# Navigation
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # less
+alias ls="ls -G"
 alias l="ls -G"
 alias ll="ls -lG"
 alias la="ls -aG"
 alias lla="ls -laG"
 alias lhat="ls -lhatG"
-alias less="vim -u /usr/share/vim/vim73/macros/less.vim"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # color tools
@@ -49,17 +40,15 @@ alias sudo="sudo "
 # homemade tools
 alias sb='echo "loading profile..."; source "$HOME/.profile"; echo "done"'
 alias reload="exec $SHELL -l"
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; brew cask update; brew cask cleanup;'
-alias todowork="subl $TODO/todo.work.taskpaper"
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup;'
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# easily review config files I use all the time
+# easily review config files I use all the time including my own help file
 alias .aliases="less $HOME/.aliases"
-alias .bashrc="less $HOME/.bashrc"
 alias .profile="less $HOME/.bash_profile"
 alias .exports="less $HOME/.exports"
-alias .functions="less $HOME/.functions"
 alias .path="less $HOME/.path"
+alias .help="less $HOME/.help | open -f -a Marked\ 2"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # ip tools
@@ -78,3 +67,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 alias plistbuddy="/usr/libexec/PlistBuddy"
+
+
+
+
+

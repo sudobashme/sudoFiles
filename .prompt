@@ -1,44 +1,17 @@
 #!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - - 
-#
-# - - - - - - - - - - - - - - [ .prompt ] - - - - - - - - - - - - - - - - - - 
+# - - ] sudoFiles/.prompt
+# - - ] updated: 2018.07.20
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-MAGENTA=$(tput setaf 125)
-ORANGE=$(tput setaf 166)
-GREEN=$(tput setaf 64)
-PURPLE=$(tput setaf 61)
-WHITE=$(tput setaf 244)
-DARKGRAY=$(tput setaf 8)
-LIGHTRED=$(tput setaf 197)
-LIGHTGRAY=$(tput setaf 10)
-YELLOW=$(tput setaf 11)
-LIGHTBLUE=$(tput setaf 39)
-BOLD=$(tput bold)
-RESET=$(tput sgr0)
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-3024.dark.sh"
 
-export MAGENTA
-export ORANGE
-export GREEN
-export PURPLE
-export WHITE
-export DARKGRAY
-export LIGHTRED
-export LIGHTGRAY
-export YELLOW
-export LIGHTBLUE
-export BOLD
-export RESET
+if [  ! -f $BASE16_SHELL ]; then
+    git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+fi
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-function parse_git_dirty() {
-  [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
-}
-
-function parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
-}
-
-export PS1="\n$GREEN --] $PURPLE\w$GREEN [-- \n$DARKGRAY($WHITE\t$DARKGRAY)-($ORANGE\u$DARKGRAY)-($WHITE\h$DARKGRAY)\n$GREEN --]$PURPLE\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\$(parse_git_branch) $GREEN[-- $RESET"
+export PS1="\n --] \w [-- "

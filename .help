@@ -1,0 +1,36 @@
+```
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# - - ] sudoFiles/.help
+# - - ] updated: 2018.07.20
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+```
+This is where I am keeping all the information I would otherwise forget.
+
+# Python
+
+## VirtualEnvWrapper and how to use.
+
+**commands: **
+* mkvirtualenv
+* deactivate
+* workon
+```
+$ mkvirtualenv automation_cookbook
+...
+Installing setuptools, pip, wheel...done.
+(automation_cookbook) $ deactivate
+$ workon automation_cookbook
+(automation_cookbook) $
+```
+**initial setup:
+```
+$ pip install virtualenvwrapper
+
+# and then add this to .exports
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+```
+

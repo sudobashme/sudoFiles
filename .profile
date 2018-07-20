@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - -
-#
-# - - - - - - - - - - - - - - [ .profile ] - - - - - - - - - - - - - - - - - -
+# - - ] sudoFiles/.profile
+# - - ] updated: 2018.07.20
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -19,12 +18,9 @@ fi
 if [ -f "$HOME/.exports" ]; then
     source "$HOME/.exports"
 fi
-if [ -f "$HOME/.extra" ]; then
-    source "$HOME/.extra"
-fi
-if [ -f "$HOME/.functions" ]; then
+if [ -f "$HOME/.private" ]; then
     source "$HOME/.functions"
 fi
-#if which pyenv > /dev/null; then
-#    eval "$(pyenv init -)"
-#fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+

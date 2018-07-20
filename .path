@@ -1,18 +1,20 @@
-#!/usr/bin/env bash
+#!#!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# - - - - - - - - - - - - [ sudofile project ] - - - - - - - - - - - - - - - - 
-#
-# - - - - - - - - - - - - - - - [ .path ] - - - - - - - - - - - - - - - - - - 
+# - - ] sudoFiles/.path
+# - - ] updated: 2018.07.20
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Added for homebrew
+
 if [[ "$PATH" != *":/usr/local/sbin:"* ]]; then
     PATH=/usr/local/sbin:$PATH
 fi
-# Added for homebrew bash
 if [[ "$PATH" != *":/usr/local/bin:"* ]]; then
-    PATH=/usr/local/sbin:$PATH
+    PATH=/usr/local/bin:$PATH
 fi
+if [[ "$PATH" != *":/Users/slime/go/bin:"* ]]; then
+    PATH=/Users/slime/go/bin:$PATH
+fi
+
 # and export it
 export PATH
