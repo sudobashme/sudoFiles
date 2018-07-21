@@ -69,6 +69,6 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
 
-
+alias udf='for i in `cat .dotfiles` ; do cp ~/$i $GITDIR/sudoFiles ; done'
 
 
