@@ -50,6 +50,7 @@ alias .exports="less $HOME/.exports"
 alias .path="less $HOME/.path"
 alias .help="less $HOME/.help | open -f -a Marked\ 2"
 
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # ip tools
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -71,4 +72,9 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 
 alias udf='for i in `cat .dotfiles` ; do cp ~/$i $GITDIR/sudoFiles ; done'
 
-
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# shortcuts
+alias .gtg="cd $GITDIR"
+alias .gtn="cd $NOTESDIR"
+alias .gtw="cd $WORKSPACE"
+alias .gtd="cd $DROPBOX"

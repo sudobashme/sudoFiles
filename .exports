@@ -10,6 +10,7 @@ export EDITOR=$(which vim)
 export GITDIR="/Users/slime/GitHub";
 export WORKSPACE="/Users/slime/WorkSpace";
 export NOTESDIR="/Users/slime/Documents/Notes.iCloud";
+export DROPBOX="/Users/slime/Dropbox";
 export HISTFILESIZE="32768";
 export HISTCONTROL="ignoreboth";
 export LANG="en_US.UTF-8";
