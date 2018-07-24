@@ -2,11 +2,21 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.exports
-# - - ] updated: 2018.07.20
+# - - ] updated: 2018.07.24
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-export EDITOR=$(which vim)
+
+if [ $(which nvim) ]; then
+    export EDITOR=$(which nvim)
+elif [ $(which vim) ]; then
+    export EDITOR=$(which vim)
+elif [ $(which vi) ]; then
+    export EDITOR=$(which vi)
+else
+    echo "no suitable editor found"
+fi
+
 export GITDIR="/Users/slime/GitHub";
 export WORKSPACE="/Users/slime/WorkSpace";
 export NOTESDIR="/Users/slime/Documents/Notes.iCloud";

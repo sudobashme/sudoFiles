@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.aliases
-# - - ] updated: 2018.07.20
+# - - ] updated: 2018.07.24
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # less
@@ -22,11 +22,11 @@ alias diff="colordiff --color=auto"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # common tools
-alias e=$(which vim)
+alias e=$EDITOR
 alias h="history"
 alias j="jobs"
-alias v=$(which vim)
-alias vi=$(which vim)
+alias v=$EDITOR
+alias vi=$EDITOR
 alias s="subl"
 alias o="open"
 alias oo="open ."
@@ -68,9 +68,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 alias plistbuddy="/usr/libexec/PlistBuddy"
-
-
-alias udf='for i in `cat .dotfiles` ; do cp ~/$i $GITDIR/sudoFiles ; done'
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # shortcuts
