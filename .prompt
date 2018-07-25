@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.prompt
-# - - ] updated: 2018.07.20
+# - - ] updated: 2018.07.24
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -14,4 +14,11 @@ if [  ! -f $BASE16_SHELL ]; then
 fi
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-export PS1="\n --] \w [-- "
+if tput setaf 1 &> /dev/null; then
+    tput sgr0; # reset colors
+    reset=$(tput sgr0);
+    blue=$(tput setaf 33);
+    green=$(tput setaf 64);
+fi
+
+export PS1="${blue}\n --] ${green}\w ${blue}[-- ${reset}"

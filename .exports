@@ -5,8 +5,12 @@
 # - - ] updated: 2018.07.24
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-
+# basics
+export HISTFILESIZE="32768";
+export HISTCONTROL="ignoreboth";
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+# set editor
 if [ $(which nvim) ]; then
     export EDITOR=$(which nvim)
 elif [ $(which vim) ]; then
@@ -16,18 +20,35 @@ elif [ $(which vi) ]; then
 else
     echo "no suitable editor found"
 fi
+# export directories
+if [ -d "$HOME/GitHub" ]; then
+    export GITDIR="$HOME/GitHub";
+fi
+if [ -d "$HOME/WorkSpace" ]; then
+    export WORKSPACE="$HOME/WorkSpace";
+fi
+if [ -d "$HOME/Dropbox" ]; then
+    export DROPBOX="$HOME/Dropbox";
+fi
+if [ -d "$HOME/Documents/Notes.iCloud" ]; then
+    export NOTESDIR="$HOME/Documents/Notes.iCloud";
+fi
+if [ -d "$HOME/WorkSpace/go" ]; then
+    export GOPATH="$HOME/WorkSpace/go";
+fi
+if [ -d "$HOME/WorkSpace/py" ]; then
+    export PYPATH="$HOME/WorkSpace/py";
+fi
+if [ -d "$HOME/.nvm" ]; then
+    export NVM_DIR="$HOME/.nvm";
+fi
+if [ -d "$HOME/.virtualenvs" ]; then
+    export WORKON_HOME="$HOME/.virtualenvs";
+fi
+if [ -s "/usr/local/bin/python3" ]; then
+    export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3";
+fi
+if [ -d "/usr/local/var/pyenv" ]; then
+    export PYENV_ROOT="/usr/local/var/pyenv";
+fi
 
-export GITDIR="/Users/slime/GitHub";
-export WORKSPACE="/Users/slime/WorkSpace";
-export NOTESDIR="/Users/slime/Documents/Notes.iCloud";
-export DROPBOX="/Users/slime/Dropbox";
-export HISTFILESIZE="32768";
-export HISTCONTROL="ignoreboth";
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3";
-export PYENV_ROOT="/usr/local/var/pyenv";
-export GOPATH="/Users/slime/WorkSpace/go";
-export PYPATH="/Users/slime/WorkSpace/py";
-export NVM_DIR="/Users/slime/.nvm";
-export WORKON_HOME="~/.virtualenvs";

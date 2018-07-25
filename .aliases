@@ -71,7 +71,15 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # shortcuts
-alias .gtg="cd $GITDIR"
-alias .gtn="cd $NOTESDIR"
-alias .gtw="cd $WORKSPACE"
-alias .gtd="cd $DROPBOX"
+if [[ $GITDIR ]]; then
+    alias .gtg="cd $GITDIR"
+fi
+if [[ $NOTESDIR ]]; then
+    alias .gtn="cd $NOTESDIR"
+fi
+if [[ $WORKSPACE ]]; then
+    alias .gtw="cd $WORKSPACE"
+fi
+if [[ $DROPBOX ]]; then
+    alias .gtd="cd $DROPBOX"
+fi
