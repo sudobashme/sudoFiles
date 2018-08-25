@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.path
-# - - ] updated: 2018.07.20
+# - - ] updated: 2018.08.25
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -11,6 +11,9 @@ if [[ "$PATH" != *":/usr/local/sbin:"* ]]; then
 fi
 if [[ "$PATH" != *":/usr/local/bin:"* ]]; then
     PATH=/usr/local/bin:$PATH
+fi
+if [[ "$PATH" != *":/usr/local/opt/go/libexec/bin:"* ]]; then
+    PATH=/usr/local/opt/go/libexec/bin:$PATH
 fi
 if [[ "$PATH" != *":/Users/slime/go/bin:"* ]]; then
     PATH=/Users/slime/go/bin:$PATH
