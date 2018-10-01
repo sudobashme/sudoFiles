@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.path
-# - - ] updated: 2018.08.25
+# - - ] updated: 2018.10.01
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -20,6 +20,9 @@ if [[ "$PATH" != *":/Users/slime/go/bin:"* ]]; then
 fi
 if [[ "$PATH" != *":/Users/slime/.rvm/bin:"* ]]; then
     PATH=/Users/slime/.rvm/bin:$PATH
+fi
+if [[ "$PATH" != *":/Applications/Visual Studio Code.app/Contents/Resources/app/bin:"* ]]; then
+    PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 fi
 
 export PATH

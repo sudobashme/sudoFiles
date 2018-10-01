@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.aliases
-# - - ] updated: 2018.07.24
+# - - ] updated: 2018.10.01
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # less
@@ -82,4 +82,7 @@ if [[ $WORKSPACE ]]; then
 fi
 if [[ $DROPBOX ]]; then
     alias .gtd="cd $DROPBOX"
+fi
+if [[ $STASHDIR ]]; then
+    alias .gts="cd $STASHDIR"
 fi

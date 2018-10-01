@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.exports
-# - - ] updated: 2018.07.24
+# - - ] updated: 2018.10.01
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # basics
@@ -51,4 +51,6 @@ fi
 if [ -d "/usr/local/var/pyenv" ]; then
     export PYENV_ROOT="/usr/local/var/pyenv";
 fi
-
+if [ -d "$HOME/stash_repos" ]; then
+    export STASHDIR="$HOME/stash_repos";
+fi
