@@ -1,8 +1,8 @@
-#!#!/usr/bin/env bash
+#!/usr/bin/env bash
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.path
-# - - ] updated: 2018.10.01
+# - - ] updated: 2018.11.15
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -24,5 +24,13 @@ fi
 if [[ "$PATH" != *":/Applications/Visual Studio Code.app/Contents/Resources/app/bin:"* ]]; then
     PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 fi
-
+if [[ "$PATH" != *":/usr/local/opt/sqlite/bin:"* ]]; then
+    PATH=/usr/local/opt/sqlite/bin:$PATH
+fi
+if [[ "$PATH" != *":/usr/local/opt/libxml2/bin:"* ]]; then
+    PATH=/usr/local/opt/libxml2/bin:$PATH
+fi
+if [[ "$PATH" != *":/usr/local/opt/bison/bin:"* ]]; then
+    PATH=/usr/local/opt/bison/bin:$PATH
+fi
 export PATH
