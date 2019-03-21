@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.aliases
-# - - ] updated: 2018.10.01
+# - - ] updated: 2019.03.20
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # less
@@ -83,6 +83,6 @@ fi
 if [[ $DROPBOX ]]; then
     alias .gtd="cd $DROPBOX"
 fi
-if [[ $STASHDIR ]]; then
-    alias .gts="cd $STASHDIR"
+if [[ $BITBUCKETDIR ]]; then
+    alias .gtb="cd $BITBUCKETDIR"
 fi

@@ -2,7 +2,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # - - ] sudoFiles/.exports
-# - - ] updated: 2018.11.15
+# - - ] updated: 2019.03.20
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # basics
@@ -52,8 +52,8 @@ fi
 if [ -d "/usr/local/var/pyenv" ]; then
     export PYENV_ROOT="/usr/local/var/pyenv";
 fi
-if [ -d "$HOME/stash_repos" ]; then
-    export STASHDIR="$HOME/stash_repos";
+if [ -d "$HOME/BitBucket" ]; then
+    export BITBUCKETDIR="$HOME/BitBucket";
 fi
 if [ -d "/usr/local/opt/sqlite" ]; then
     export LDFLAGS="-L/usr/local/opt/sqlite/lib";
